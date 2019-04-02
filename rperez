@@ -1,0 +1,61 @@
+/* Romary Perez
+	04/01/2019
+Perez_Vector_Example.cpp : 
+*/
+
+#include "pch.h"
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int diameter(int r);
+
+int main()
+{
+	vector<int> li;
+	int r = 0, d = 0;
+
+	while (r != 1)
+	{
+		cout << "enter a number for radius: \n";
+		cin >> r;
+
+		if (r == 1)
+		{
+			break;
+		}
+		else
+		{
+			d = diameter(r);
+
+			li.push_back(d);
+
+			cout << "The Diameter is: " << d << endl;
+			cout << endl;
+		}
+	}
+
+	unsigned int i;
+	string s = "";
+
+	//Output to list
+	for (i = 0; i < li.size(); i++)
+	{
+		s += to_string(li[i]) + "\r\n";
+	}
+	
+	cout << endl;
+	cout << "list Output Last in Last Out: " << endl;
+	cout << s << endl;
+
+}
+
+// Calculate diameter function
+int diameter(int r)
+{
+	int d = r * 2;
+
+		return d;
+}
